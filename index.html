@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Noa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+        }
+        
+        .container {
+            padding: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .hearts {
+            font-size: 2.5em;
+            margin: 20px 0;
+            letter-spacing: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            margin-top: 40px;
+            font-style: italic;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Floating hearts background */
+        .heart-bg {
+            position: fixed;
+            font-size: 20px;
+            opacity: 0.3;
+            animation: floatUp 15s linear infinite;
+        }
+        
+        @keyframes floatUp {
+            from {
+                transform: translateY(100vh) rotate(0deg);
+            }
+            to {
+                transform: translateY(-100px) rotate(360deg);
+            }
+        }
+        
+        /* Media query for mobile */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .hearts {
+                font-size: 2em;
+                letter-spacing: 5px;
+            }
+            .subtitle {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating background hearts -->
+    <div class="heart-bg" style="left: 10%; animation-delay: 0s;">💕</div>
+    <div class="heart-bg" style="left: 20%; animation-delay: 3s;">❤️</div>
+    <div class="heart-bg" style="left: 30%; animation-delay: 6s;">💖</div>
+    <div class="heart-bg" style="left: 40%; animation-delay: 9s;">💗</div>
+    <div class="heart-bg" style="left: 50%; animation-delay: 12s;">💓</div>
+    <div class="heart-bg" style="left: 60%; animation-delay: 2s;">💝</div>
+    <div class="heart-bg" style="left: 70%; animation-delay: 5s;">💕</div>
+    <div class="heart-bg" style="left: 80%; animation-delay: 8s;">❤️</div>
+    <div class="heart-bg" style="left: 90%; animation-delay: 11s;">💖</div>
+    
+    <div class="container">
+        <div class="hearts">💕❤️💖💗💓💝</div>
+        <h1>I love you Noa</h1>
+        <div class="hearts">💘💞💕❤️💖💗</div>
+        <p class="subtitle">(i hope you won a lot of money at quiz night)</p>
+    </div>
+</body>
+</html>
